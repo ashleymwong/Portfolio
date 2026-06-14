@@ -5,6 +5,14 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Dropdown display on click */
+			#nav li.open > ul {
+				display: block !important;
+				visibility: visible !important;
+				opacity: 1 !important;
+			}
+		</style>
 	</head>
 
 	<body class="homepage is-preload">
@@ -35,53 +43,33 @@
 										<a href="no-sidebar.html">About</a>
 									</li>
 
-									<li>
-										<a href="#">Experience</a>
+									<li id="nav-experience">
+										<a href="#" id="nav-experience-link">Experience</a>
 										<ul>
-
 											<li>
-												<a href="left-sidebar.html">
-													DISC Alloys
-												</a>
+												<a href="left-sidebar.html">DISC Alloys</a>
 											</li>
-
 											<li>
-												<a href="right-sidebar.html">
-													Viridis Research
-												</a>
+												<a href="right-sidebar.html">Viridis Research</a>
 											</li>
-
 											<li>
-												<a href="left-sidebar.html">
-													Vanderlande Industries
-												</a>
+												<a href="left-sidebar.html">Vanderlande Industries</a>
 											</li>
-
 										</ul>
 									</li>
 
-									<li>
-										<a href="#">Projects</a>
+									<li id="nav-projects">
+										<a href="#" id="nav-projects-link">Projects</a>
 										<ul>
-
 											<li>
-												<a href="no-sidebar.html">
-													Human Powered Submarine
-												</a>
+												<a href="no-sidebar.html">Human Powered Submarine</a>
 											</li>
-
 											<li>
-												<a href="left-sidebar.html">
-													Robotic Hand
-												</a>
+												<a href="left-sidebar.html">Robotic Hand</a>
 											</li>
-
 											<li>
-												<a href="right-sidebar.html">
-													Wearable Alert Device
-												</a>
+												<a href="right-sidebar.html">Wearable Alert Device</a>
 											</li>
-
 											<li>
 												<a href="#">Course Projects</a>
 												<ul>
@@ -91,7 +79,6 @@
 													<li><a href="#">Thermodynamics</a></li>
 												</ul>
 											</li>
-
 										</ul>
 									</li>
 
@@ -107,15 +94,8 @@
 
 					<!-- Banner -->
 					<div id="banner">
-
-						<h2>
-							<strong>Engineering Portfolio</strong>
-						</h2>
-
-						<p>
-							CAD | Manufacturing | Robotics | Product Design
-						</p>
-
+						<h2><strong>Engineering Portfolio</strong></h2>
+						<p>CAD | Manufacturing | Robotics | Product Design</p>
 					</div>
 
 				</div>
@@ -135,7 +115,6 @@
 								<div class="col-12">
 									<header class="first major">
 										<h2>About Me</h2>
-
 										<p style="font-size: 0.9em;">
 											I'm a Mechanical Integrated Engineering Student at the University of British Columbia with a passion for mechatronic engineering. I'm interesting in innovative and sustainable technology, and am always eager for a challenge! I'm active in leadership and mentorship among my community and strive to improve people's quality of life.
 											Check out some of internship work and projects below!
@@ -145,12 +124,11 @@
 
 								<div class="col-4 col-12-medium">
 									<section>
-										<a href="#" class="image featured">
+										<a href="#" class="image featured card-link" data-target="nav-experience">
 											<img src="images/pic01.jpg" alt="" />
 										</a>
-
 										<header class="second icon solid fa-cogs">
-											<h3>Internships</h3>
+											<h3><a href="#" class="card-link" data-target="nav-experience">Internships</a></h3>
 											<p>Projects and experience</p>
 										</header>
 									</section>
@@ -158,12 +136,11 @@
 
 								<div class="col-4 col-12-medium">
 									<section>
-										<a href="#" class="image featured">
+										<a href="no-sidebar.html" class="image featured">
 											<img src="images/pic02.jpg" alt="" />
 										</a>
-
 										<header class="second icon solid fa-industry">
-											<h3>Design Team</h3>
+											<h3><a href="no-sidebar.html">Design Team</a></h3>
 											<p>UBC Submarine Design Team</p>
 										</header>
 									</section>
@@ -171,22 +148,17 @@
 
 								<div class="col-4 col-12-medium">
 									<section>
-										<a href="#" class="image featured">
+										<a href="#" class="image featured card-link" data-target="nav-projects">
 											<img src="images/pic03.jpg" alt="" />
 										</a>
-
 										<header class="second icon solid fa-robot">
-											<h3>Projects</h3>
+											<h3><a href="#" class="card-link" data-target="nav-projects">Projects</a></h3>
 											<p>Capstone and course projects</p>
 										</header>
 									</section>
 								</div>
 
-								<div class="col-12">
-									<p>
-
-									</p>
-								</div>
+								<div class="col-12"><p></p></div>
 
 							</div>
 
@@ -197,16 +169,16 @@
 
 				<div class="wrapper style2">
 					<div class="inner" style="padding: 2em 0;">
-				
+
 						<section class="container box feature2">
-				
+
 							<header class="major" style="text-align: center;">
 								<h2>Technical Skills</h2>
 								<p>Engineering software, manufacturing, and design tools</p>
 							</header>
-				
+
 							<div class="row">
-				
+
 								<div class="col-3 col-6-medium col-12-small">
 									<section>
 										<h3>CAD & Design</h3>
@@ -218,7 +190,7 @@
 										</ul>
 									</section>
 								</div>
-				
+
 								<div class="col-3 col-6-medium col-12-small">
 									<section>
 										<h3>Manufacturing</h3>
@@ -230,7 +202,7 @@
 										</ul>
 									</section>
 								</div>
-				
+
 								<div class="col-3 col-6-medium col-12-small">
 									<section>
 										<h3>Analysis</h3>
@@ -242,7 +214,7 @@
 										</ul>
 									</section>
 								</div>
-				
+
 								<div class="col-3 col-6-medium col-12-small">
 									<section>
 										<h3>Programming</h3>
@@ -254,13 +226,12 @@
 										</ul>
 									</section>
 								</div>
-				
+
 							</div>
-				
+
 						</section>
-				
+
 					</div>
-				</div>
 				</div>
 
 				<div class="wrapper style3">
@@ -274,83 +245,42 @@
 									<!-- Article List -->
 									<section class="box article-list">
 
-										<h2 class="icon fa-file-alt">
-											Featured Projects
-										</h2>
+										<h2 class="icon fa-file-alt">Featured Projects</h2>
 
 										<!-- Project -->
 										<article class="box excerpt">
-
-											<a href="#" class="image left">
-												<img src="images/pic04.jpg" alt="" />
-											</a>
-
+											<a href="#" class="image left"><img src="images/pic04.jpg" alt="" /></a>
 											<div>
 												<header>
 													<span class="date">2026</span>
-													<h3>
-														<a href="#">
-															Human Powered Submarine
-														</a>
-													</h3>
+													<h3><a href="#">Human Powered Submarine</a></h3>
 												</header>
-
-												<p>
-													Mechanical design and subsystem development
-													for a competitive underwater vehicle project.
-												</p>
+												<p>Mechanical design and subsystem development for a competitive underwater vehicle project.</p>
 											</div>
-
 										</article>
 
 										<!-- Project -->
 										<article class="box excerpt">
-
-											<a href="#" class="image left">
-												<img src="images/pic05.jpg" alt="" />
-											</a>
-
+											<a href="#" class="image left"><img src="images/pic05.jpg" alt="" /></a>
 											<div>
 												<header>
 													<span class="date">2026</span>
-													<h3>
-														<a href="#">
-															Robotic Hand
-														</a>
-													</h3>
+													<h3><a href="#">Robotic Hand</a></h3>
 												</header>
-
-												<p>
-													Designed and prototyped a robotic hand system
-													with mechanical linkages and actuation concepts.
-												</p>
+												<p>Designed and prototyped a robotic hand system with mechanical linkages and actuation concepts.</p>
 											</div>
-
 										</article>
 
 										<!-- Project -->
 										<article class="box excerpt">
-
-											<a href="#" class="image left">
-												<img src="images/pic06.jpg" alt="" />
-											</a>
-
+											<a href="#" class="image left"><img src="images/pic06.jpg" alt="" /></a>
 											<div>
 												<header>
 													<span class="date">2026</span>
-													<h3>
-														<a href="#">
-															Wearable Alert Device
-														</a>
-													</h3>
+													<h3><a href="#">Wearable Alert Device</a></h3>
 												</header>
-
-												<p>
-													Developed a wearable obstacle alert device focused
-													on accessibility and user-centered design.
-												</p>
+												<p>Developed a wearable obstacle alert device focused on accessibility and user-centered design.</p>
 											</div>
-
 										</article>
 
 									</section>
@@ -362,40 +292,18 @@
 									<!-- Spotlight -->
 									<section class="box spotlight">
 
-										<h2 class="icon fa-file-alt">
-											Spotlight
-										</h2>
+										<h2 class="icon fa-file-alt">Spotlight</h2>
 
 										<article>
-
-											<a href="#" class="image featured">
-												<img src="images/pic07.jpg" alt="" />
-											</a>
-
+											<a href="#" class="image featured"><img src="images/pic07.jpg" alt="" /></a>
 											<header>
-												<h3>
-													<a href="#">
-														Current Focus
-													</a>
-												</h3>
-
-												<p>
-													Mechanical design and product development
-												</p>
+												<h3><a href="#">Current Focus</a></h3>
+												<p>Mechanical design and product development</p>
 											</header>
-
-											<p>
-												Currently focused on engineering design projects,
-												manufacturing methods, CAD development,
-												and interdisciplinary robotics work.
-											</p>
-
+											<p>Currently focused on engineering design projects, manufacturing methods, CAD development, and interdisciplinary robotics work.</p>
 											<footer>
-												<a href="#" class="button alt icon solid fa-file-alt">
-													View Projects
-												</a>
+												<a href="#" class="button alt icon solid fa-file-alt">View Projects</a>
 											</footer>
-
 										</article>
 
 									</section>
@@ -418,65 +326,35 @@
 					<div class="row">
 
 						<div class="col-12">
-
-							<!-- Contact -->
 							<section>
-
 								<h2>Get in Touch</h2>
-
 								<div>
 									<div class="row">
-
 										<div class="col-6 col-12-small">
-
 											<dl class="contact">
-
 												<dt>LinkedIn</dt>
-												<dd>
-													<a href="#">
-														@ashleywong558
-													</a>
-												</dd>
-
+												<dd><a href="#">@ashleywong558</a></dd>
 												<dt>Email</dt>
-												<dd>
-													<a href="#">
-														ashleywong558@gmail.com
-													</a>
-												</dd>
-
+												<dd><a href="#">ashleywong558@gmail.com</a></dd>
 											</dl>
-
 										</div>
-
 										<div class="col-6 col-12-small">
-
 											<dl class="contact">
-
 												<dt>Location</dt>
-												<dd>
-													Vancouver, Canada
-												</dd>
-
+												<dd>Vancouver, Canada</dd>
 											</dl>
-
 										</div>
-
 									</div>
 								</div>
-
 							</section>
-
 						</div>
 
 						<div class="col-12">
-
 							<div id="copyright">
 								<ul class="menu">
 									<li>&copy; Ashley Wong. All rights reserved.</li>
 								</ul>
 							</div>
-
 						</div>
 
 					</div>
@@ -494,6 +372,43 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+
+				function openDropdown(navItemId) {
+					// Close any open dropdowns first
+					document.querySelectorAll('#nav li.open').forEach(function(el) {
+						el.classList.remove('open');
+					});
+					var navItem = document.getElementById(navItemId);
+					if (navItem) {
+						navItem.classList.add('open');
+						// Scroll to top so dropdown is visible
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+					}
+				}
+
+				// Close dropdown when clicking elsewhere
+				document.addEventListener('click', function(e) {
+					if (!e.target.closest('#nav')) {
+						document.querySelectorAll('#nav li.open').forEach(function(el) {
+							el.classList.remove('open');
+						});
+					}
+				});
+
+				// Wire up the three homepage cards
+				document.querySelectorAll('.card-link').forEach(function(link) {
+					link.addEventListener('click', function(e) {
+						e.preventDefault();
+						var target = this.getAttribute('data-target');
+						openDropdown(target);
+					});
+				});
+
+			});
+		</script>
 
 	</body>
 </html>

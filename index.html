@@ -6,11 +6,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* Dropdown display on click */
-			#nav li.open > ul {
+			/* Force dropdown open when triggered by card click */
+			#nav li.force-open > ul {
 				display: block !important;
 				visibility: visible !important;
 				opacity: 1 !important;
+				pointer-events: all !important;
+				position: absolute;
+				z-index: 9999;
 			}
 		</style>
 	</head>
@@ -46,30 +49,18 @@
 									<li id="nav-experience">
 										<a href="#" id="nav-experience-link">Experience</a>
 										<ul>
-											<li>
-												<a href="left-sidebar.html">DISC Alloys</a>
-											</li>
-											<li>
-												<a href="right-sidebar.html">Viridis Research</a>
-											</li>
-											<li>
-												<a href="left-sidebar.html">Vanderlande Industries</a>
-											</li>
+											<li><a href="left-sidebar.html">DISC Alloys</a></li>
+											<li><a href="right-sidebar.html">Viridis Research</a></li>
+											<li><a href="left-sidebar.html">Vanderlande Industries</a></li>
 										</ul>
 									</li>
 
 									<li id="nav-projects">
 										<a href="#" id="nav-projects-link">Projects</a>
 										<ul>
-											<li>
-												<a href="no-sidebar.html">Human Powered Submarine</a>
-											</li>
-											<li>
-												<a href="left-sidebar.html">Robotic Hand</a>
-											</li>
-											<li>
-												<a href="right-sidebar.html">Wearable Alert Device</a>
-											</li>
+											<li><a href="no-sidebar.html">Human Powered Submarine</a></li>
+											<li><a href="left-sidebar.html">Robotic Hand</a></li>
+											<li><a href="right-sidebar.html">Wearable Alert Device</a></li>
 											<li>
 												<a href="#">Course Projects</a>
 												<ul>
@@ -107,9 +98,7 @@
 				<div class="wrapper style1">
 					<div class="inner">
 
-						<!-- Feature 1 -->
 						<section class="container box feature1">
-
 							<div class="row">
 
 								<div class="col-12">
@@ -124,11 +113,11 @@
 
 								<div class="col-4 col-12-medium">
 									<section>
-										<a href="#" class="image featured card-link" data-target="nav-experience">
+										<a href="#" class="image featured card-trigger" data-nav="nav-experience">
 											<img src="images/pic01.jpg" alt="" />
 										</a>
 										<header class="second icon solid fa-cogs">
-											<h3><a href="#" class="card-link" data-target="nav-experience">Internships</a></h3>
+											<h3><a href="#" class="card-trigger" data-nav="nav-experience">Internships</a></h3>
 											<p>Projects and experience</p>
 										</header>
 									</section>
@@ -148,11 +137,11 @@
 
 								<div class="col-4 col-12-medium">
 									<section>
-										<a href="#" class="image featured card-link" data-target="nav-projects">
+										<a href="#" class="image featured card-trigger" data-nav="nav-projects">
 											<img src="images/pic03.jpg" alt="" />
 										</a>
 										<header class="second icon solid fa-robot">
-											<h3><a href="#" class="card-link" data-target="nav-projects">Projects</a></h3>
+											<h3><a href="#" class="card-trigger" data-nav="nav-projects">Projects</a></h3>
 											<p>Capstone and course projects</p>
 										</header>
 									</section>
@@ -161,7 +150,6 @@
 								<div class="col-12"><p></p></div>
 
 							</div>
-
 						</section>
 
 					</div>
@@ -169,16 +157,12 @@
 
 				<div class="wrapper style2">
 					<div class="inner" style="padding: 2em 0;">
-
 						<section class="container box feature2">
-
 							<header class="major" style="text-align: center;">
 								<h2>Technical Skills</h2>
 								<p>Engineering software, manufacturing, and design tools</p>
 							</header>
-
 							<div class="row">
-
 								<div class="col-3 col-6-medium col-12-small">
 									<section>
 										<h3>CAD & Design</h3>
@@ -190,7 +174,6 @@
 										</ul>
 									</section>
 								</div>
-
 								<div class="col-3 col-6-medium col-12-small">
 									<section>
 										<h3>Manufacturing</h3>
@@ -202,7 +185,6 @@
 										</ul>
 									</section>
 								</div>
-
 								<div class="col-3 col-6-medium col-12-small">
 									<section>
 										<h3>Analysis</h3>
@@ -214,7 +196,6 @@
 										</ul>
 									</section>
 								</div>
-
 								<div class="col-3 col-6-medium col-12-small">
 									<section>
 										<h3>Programming</h3>
@@ -226,28 +207,20 @@
 										</ul>
 									</section>
 								</div>
-
 							</div>
-
 						</section>
-
 					</div>
 				</div>
 
 				<div class="wrapper style3">
 					<div class="inner">
-
 						<div class="container">
 							<div class="row">
 
 								<div class="col-8 col-12-medium">
-
-									<!-- Article List -->
 									<section class="box article-list">
-
 										<h2 class="icon fa-file-alt">Featured Projects</h2>
 
-										<!-- Project -->
 										<article class="box excerpt">
 											<a href="#" class="image left"><img src="images/pic04.jpg" alt="" /></a>
 											<div>
@@ -259,7 +232,6 @@
 											</div>
 										</article>
 
-										<!-- Project -->
 										<article class="box excerpt">
 											<a href="#" class="image left"><img src="images/pic05.jpg" alt="" /></a>
 											<div>
@@ -271,7 +243,6 @@
 											</div>
 										</article>
 
-										<!-- Project -->
 										<article class="box excerpt">
 											<a href="#" class="image left"><img src="images/pic06.jpg" alt="" /></a>
 											<div>
@@ -284,16 +255,11 @@
 										</article>
 
 									</section>
-
 								</div>
 
 								<div class="col-4 col-12-medium">
-
-									<!-- Spotlight -->
 									<section class="box spotlight">
-
 										<h2 class="icon fa-file-alt">Spotlight</h2>
-
 										<article>
 											<a href="#" class="image featured"><img src="images/pic07.jpg" alt="" /></a>
 											<header>
@@ -305,14 +271,11 @@
 												<a href="#" class="button alt icon solid fa-file-alt">View Projects</a>
 											</footer>
 										</article>
-
 									</section>
-
 								</div>
 
 							</div>
 						</div>
-
 					</div>
 				</div>
 
@@ -320,11 +283,8 @@
 
 			<!-- Footer -->
 			<div id="footer-wrapper">
-
 				<footer id="footer" class="container">
-
 					<div class="row">
-
 						<div class="col-12">
 							<section>
 								<h2>Get in Touch</h2>
@@ -348,7 +308,6 @@
 								</div>
 							</section>
 						</div>
-
 						<div class="col-12">
 							<div id="copyright">
 								<ul class="menu">
@@ -356,11 +315,8 @@
 								</ul>
 							</div>
 						</div>
-
 					</div>
-
 				</footer>
-
 			</div>
 
 		</div>
@@ -374,40 +330,52 @@
 		<script src="assets/js/main.js"></script>
 
 		<script>
-			document.addEventListener('DOMContentLoaded', function () {
+		// Run after all other scripts have initialized
+		window.addEventListener('load', function () {
 
-				function openDropdown(navItemId) {
-					// Close any open dropdowns first
-					document.querySelectorAll('#nav li.open').forEach(function(el) {
-						el.classList.remove('open');
-					});
-					var navItem = document.getElementById(navItemId);
-					if (navItem) {
-						navItem.classList.add('open');
-						// Scroll to top so dropdown is visible
-						window.scrollTo({ top: 0, behavior: 'smooth' });
-					}
+			var activeNavItem = null;
+
+			function openDropdown(navItemId) {
+				// Remove any existing force-open
+				if (activeNavItem) {
+					activeNavItem.classList.remove('force-open');
 				}
+				var item = document.getElementById(navItemId);
+				if (item) {
+					item.classList.add('force-open');
+					activeNavItem = item;
+					window.scrollTo({ top: 0, behavior: 'smooth' });
+				}
+			}
 
-				// Close dropdown when clicking elsewhere
-				document.addEventListener('click', function(e) {
-					if (!e.target.closest('#nav')) {
-						document.querySelectorAll('#nav li.open').forEach(function(el) {
-							el.classList.remove('open');
-						});
+			function closeAll() {
+				document.querySelectorAll('#nav li.force-open').forEach(function(el) {
+					el.classList.remove('force-open');
+				});
+				activeNavItem = null;
+			}
+
+			// Card clicks open the dropdown
+			document.querySelectorAll('.card-trigger').forEach(function(el) {
+				el.addEventListener('click', function(e) {
+					e.preventDefault();
+					e.stopPropagation();
+					var target = this.getAttribute('data-nav');
+					if (activeNavItem && activeNavItem.id === target) {
+						closeAll(); // toggle off if already open
+					} else {
+						openDropdown(target);
 					}
 				});
-
-				// Wire up the three homepage cards
-				document.querySelectorAll('.card-link').forEach(function(link) {
-					link.addEventListener('click', function(e) {
-						e.preventDefault();
-						var target = this.getAttribute('data-target');
-						openDropdown(target);
-					});
-				});
-
 			});
+
+			// Clicking outside nav closes dropdowns
+			document.addEventListener('click', function(e) {
+				if (!e.target.closest('#nav') && !e.target.closest('.card-trigger')) {
+					closeAll();
+				}
+			});
+		});
 		</script>
 
 	</body>

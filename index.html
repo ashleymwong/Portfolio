@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -35,8 +36,8 @@
 										<a href="no-sidebar.html">About</a>
 									</li>
 
-									<li>
-										<a href="#">Experience</a>
+									<li id="nav-experience">
+										<a href="#" id="nav-experience-link">Experience</a>
 										<ul>
 
 											<li>
@@ -60,11 +61,11 @@
 										</ul>
 									</li>
 
-									<li>
-										<a href="#">Projects</a>
+									<li id="nav-projects">
+										<a href="#" id="nav-projects-link">Projects</a>
 										<ul>
 
-											<li>
+											<li id="nav-submarine">
 												<a href="no-sidebar.html">
 													Human Powered Submarine
 												</a>
@@ -134,11 +135,11 @@
 
 								<div class="col-12">
 									<header class="first major">
-										<h2>About Me</h2>
+										<h2>Engineering Projects & Experience</h2>
 
-										<p style="font-size: 0.9em;">
-											I'm a Mechanical Integrated Engineering Student at the University of British Columbia with a passion for mechatronic engineering. I'm interesting in innovative and sustainable technology, and am always eager for a challenge! I'm active in leadership and mentorship among my community and strive to improve people's quality of life.
-											Check out some of internship work and projects below!
+										<p>
+											Mechanical engineering student with experience in CAD,
+											manufacturing, prototyping, robotics, and product development.
 										</p>
 									</header>
 								</div>
@@ -150,8 +151,8 @@
 										</a>
 
 										<header class="second icon solid fa-cogs">
-											<h3>Internships</h3>
-											<p>Projects and experience</p>
+											<h3>Design Projects</h3>
+											<p>CAD and product development</p>
 										</header>
 									</section>
 								</div>
@@ -163,8 +164,8 @@
 										</a>
 
 										<header class="second icon solid fa-industry">
-											<h3>Design Team</h3>
-											<p>UBC Submarine Design Team</p>
+											<h3>Manufacturing</h3>
+											<p>DFM, machining, and prototyping</p>
 										</header>
 									</section>
 								</div>
@@ -176,15 +177,16 @@
 										</a>
 
 										<header class="second icon solid fa-robot">
-											<h3>Projects</h3>
-											<p>Capstone and course projects</p>
+											<h3>Robotics</h3>
+											<p>Automation and mechatronics</p>
 										</header>
 									</section>
 								</div>
 
 								<div class="col-12">
 									<p>
-
+										Welcome to my engineering portfolio showcasing projects,
+										research, manufacturing experience, and technical design work.
 									</p>
 								</div>
 
@@ -196,70 +198,34 @@
 				</div>
 
 				<div class="wrapper style2">
-					<div class="inner" style="padding: 2em 0;">
+					<div class="inner">
 				
-						<section class="container box feature2">
+				<!-- Feature 2 -->
+				<section class="container box feature2">
 				
-							<header class="major" style="text-align: center;">
-								<h2>Technical Skills</h2>
-								<p>Engineering software, manufacturing, and design tools</p>
-							</header>
+					<div class="row aln-center">
 				
-							<div class="row">
+						<div class="col-8 col-12-medium">
+							<section>
 				
-								<div class="col-3 col-6-medium col-12-small">
-									<section>
-										<h3>CAD & Design</h3>
-										<ul>
-											<li>SolidWorks</li>
-											<li>Fusion 360</li>
-											<li>GD&T</li>
-											<li>Technical Drawings</li>
-										</ul>
-									</section>
-								</div>
+								<header class="major">
+									<h2>Technical Skills</h2>
+									<p>Engineering software and tools</p>
+								</header>
 				
-								<div class="col-3 col-6-medium col-12-small">
-									<section>
-										<h3>Manufacturing</h3>
-										<ul>
-											<li>CNC Machining</li>
-											<li>3D Printing</li>
-											<li>DFM/DFA</li>
-											<li>Rapid Prototyping</li>
-										</ul>
-									</section>
-								</div>
+								<p>
+									Experienced with SolidWorks, Fusion 360, GD&T,
+									prototyping, machining, manufacturing processes,
+									and engineering analysis.
+								</p>
 				
-								<div class="col-3 col-6-medium col-12-small">
-									<section>
-										<h3>Analysis</h3>
-										<ul>
-											<li>FEA</li>
-											<li>Tolerance Analysis</li>
-											<li>Root Cause Analysis</li>
-											<li>Testing & Validation</li>
-										</ul>
-									</section>
-								</div>
-				
-								<div class="col-3 col-6-medium col-12-small">
-									<section>
-										<h3>Programming</h3>
-										<ul>
-											<li>MATLAB</li>
-											<li>Python</li>
-											<li>Arduino</li>
-											<li>Automation</li>
-										</ul>
-									</section>
-								</div>
-				
-							</div>
-				
-						</section>
+							</section>
+						</div>
 				
 					</div>
+				
+				</section>
+				
 				</div>
 				</div>
 
@@ -279,7 +245,7 @@
 										</h2>
 
 										<!-- Project -->
-										<article class="box excerpt">
+										<article class="box excerpt" id="project-submarine">
 
 											<a href="#" class="image left">
 												<img src="images/pic04.jpg" alt="" />
@@ -488,6 +454,62 @@
 		</div>
 
 		<!-- Scripts -->
+		<script>
+			// Helper: simulate a click on a nav item to open its dropdown
+			function triggerNavDropdown(navItemId) {
+				var navItem = document.getElementById(navItemId);
+				if (navItem) {
+					var link = navItem.querySelector('a');
+					if (link) link.click();
+					// Scroll nav into view
+					navItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+				}
+			}
+
+			// Helper: scroll smoothly to an element by ID
+			function scrollToSection(sectionId) {
+				var el = document.getElementById(sectionId);
+				if (el) {
+					el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				}
+			}
+
+			document.addEventListener('DOMContentLoaded', function () {
+
+				// "Internships Projects and experience" → Experience dropdown
+				var internshipsLinks = document.querySelectorAll('a[href*="internship"], a[href*="experience"]');
+				// More reliable: target by text content
+				document.querySelectorAll('a').forEach(function (a) {
+					var text = a.textContent.trim().toLowerCase();
+					if (text.includes('internship') || text === 'internships projects and experience') {
+						a.addEventListener('click', function (e) {
+							e.preventDefault();
+							triggerNavDropdown('nav-experience');
+						});
+					}
+					// "Design Team UBC Submarine Design Team" → Human Powered Submarine section
+					if (text.includes('submarine design team') || text.includes('ubc submarine')) {
+						a.addEventListener('click', function (e) {
+							e.preventDefault();
+							// Also highlight in nav
+							triggerNavDropdown('nav-projects');
+							setTimeout(function () {
+								scrollToSection('project-submarine');
+								// Navigate to the submarine page
+								window.location.href = 'no-sidebar.html';
+							}, 300);
+						});
+					}
+					// "Projects Capstone and course projects" → Projects dropdown
+					if (text.includes('capstone') || text.includes('course projects')) {
+						a.addEventListener('click', function (e) {
+							e.preventDefault();
+							triggerNavDropdown('nav-projects');
+						});
+					}
+				});
+			});
+		</script>
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.dropotron.min.js"></script>
 		<script src="assets/js/browser.min.js"></script>
@@ -497,3 +519,4 @@
 
 	</body>
 </html>
+```

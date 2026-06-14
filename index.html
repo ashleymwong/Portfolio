@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* Force dropdown open when triggered by card click */
 			#nav li.force-open > ul {
 				display: block !important;
 				visibility: visible !important;
@@ -25,63 +24,8 @@
 			<div id="header-wrapper">
 				<div class="container">
 
-					<!-- Header -->
-					<header id="header">
-						<div class="inner">
-
-							<!-- Logo -->
-							<h1>
-								<a href="index.html" id="logo">Ashley Wong</a>
-							</h1>
-
-							<!-- Nav -->
-							<nav id="nav">
-								<ul>
-
-									<li class="current_page_item">
-										<a href="index.html">Home</a>
-									</li>
-
-									<li>
-										<a href="no-sidebar.html">About</a>
-									</li>
-
-									<li id="nav-experience">
-										<a href="#" id="nav-experience-link">Experience</a>
-										<ul>
-											<li><a href="left-sidebar.html">DISC Alloys</a></li>
-											<li><a href="right-sidebar.html">Viridis Research</a></li>
-											<li><a href="left-sidebar.html">Vanderlande Industries</a></li>
-										</ul>
-									</li>
-
-									<li id="nav-projects">
-										<a href="#" id="nav-projects-link">Projects</a>
-										<ul>
-											<li><a href="no-sidebar.html">Human Powered Submarine</a></li>
-											<li><a href="left-sidebar.html">Robotic Hand</a></li>
-											<li><a href="right-sidebar.html">Wearable Alert Device</a></li>
-											<li>
-												<a href="#">Course Projects</a>
-												<ul>
-													<li><a href="#">Machine Design</a></li>
-													<li><a href="#">FEA</a></li>
-													<li><a href="#">Control Systems</a></li>
-													<li><a href="#">Thermodynamics</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-
-									<li>
-										<a href="#footer-wrapper">Contact</a>
-									</li>
-
-								</ul>
-							</nav>
-
-						</div>
-					</header>
+					<!-- Nav loads here from nav.html -->
+					<div id="nav-placeholder"></div>
 
 					<!-- Banner -->
 					<div id="banner">
@@ -97,7 +41,6 @@
 
 				<div class="wrapper style1">
 					<div class="inner">
-
 						<section class="container box feature1">
 							<div class="row">
 
@@ -105,8 +48,8 @@
 									<header class="first major">
 										<h2>About Me</h2>
 										<p style="font-size: 0.9em;">
-											I'm a Mechanical Integrated Engineering Student at the University of British Columbia with a passion for mechatronic engineering. I'm interesting in innovative and sustainable technology, and am always eager for a challenge! I'm active in leadership and mentorship among my community and strive to improve people's quality of life.
-											Check out some of internship work and projects below!
+											I'm a Mechanical Integrated Engineering Student at the University of British Columbia with a passion for mechatronic engineering. I'm interested in innovative and sustainable technology, and am always eager for a challenge! I'm active in leadership and mentorship among my community and strive to improve people's quality of life.
+											Check out some of my internship work and projects below!
 										</p>
 									</header>
 								</div>
@@ -151,7 +94,6 @@
 
 							</div>
 						</section>
-
 					</div>
 				</div>
 
@@ -253,7 +195,6 @@
 												<p>Developed a wearable obstacle alert device focused on accessibility and user-centered design.</p>
 											</div>
 										</article>
-
 									</section>
 								</div>
 
@@ -321,62 +262,14 @@
 
 		</div>
 
-		<!-- Scripts -->
+		<!-- Scripts — nav-loader.js must come after jQuery -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.dropotron.min.js"></script>
 		<script src="assets/js/browser.min.js"></script>
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-
-		<script>
-		// Run after all other scripts have initialized
-		window.addEventListener('load', function () {
-
-			var activeNavItem = null;
-
-			function openDropdown(navItemId) {
-				// Remove any existing force-open
-				if (activeNavItem) {
-					activeNavItem.classList.remove('force-open');
-				}
-				var item = document.getElementById(navItemId);
-				if (item) {
-					item.classList.add('force-open');
-					activeNavItem = item;
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-				}
-			}
-
-			function closeAll() {
-				document.querySelectorAll('#nav li.force-open').forEach(function(el) {
-					el.classList.remove('force-open');
-				});
-				activeNavItem = null;
-			}
-
-			// Card clicks open the dropdown
-			document.querySelectorAll('.card-trigger').forEach(function(el) {
-				el.addEventListener('click', function(e) {
-					e.preventDefault();
-					e.stopPropagation();
-					var target = this.getAttribute('data-nav');
-					if (activeNavItem && activeNavItem.id === target) {
-						closeAll(); // toggle off if already open
-					} else {
-						openDropdown(target);
-					}
-				});
-			});
-
-			// Clicking outside nav closes dropdowns
-			document.addEventListener('click', function(e) {
-				if (!e.target.closest('#nav') && !e.target.closest('.card-trigger')) {
-					closeAll();
-				}
-			});
-		});
-		</script>
+		<script src="nav-loader.js"></script>
 
 	</body>
 </html>
